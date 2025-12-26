@@ -1,5 +1,9 @@
 import e from 'express';
+import dotenv from 'dotenv';
+import JWT from 'jsonwebtoken';
 import Usuario from '../models/Usuario.js';
+
+dotenv.config();
 
 export const Cadastrar = async (req, res) => {
     const {nome, email, senha, data_nasc} = req.body;
@@ -90,13 +94,19 @@ export const Login = async (req, res) => {
                 }
             })
             if(usuario){
-                res.status(200).json({ status: true, dados: usuario});
+                const token = JWT.sign({
+                    id: usuario.id, 
+                    nome: usuario.nome,
+                },
+                process.env.JWT_SECRET_KEY,
+                {expiresIn: '1h'}
+            );
+                res.status(200).json({ status: true, dados: usuario, token: token});
                 return;
             }
         }
         res.status(403).json({ status: false, mensagem: "Login Inválido"});
     } catch (error) {
-        console.error('Erro ao fazer login:', error);
         res.status(500).json({ error: 'Erro ao fazer login' });
     }
 }
