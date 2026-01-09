@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-const sequelize = new Sequelize('teste_api', 'root', '', {
+const sequelize = new Sequelize('semcalote', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
   });
