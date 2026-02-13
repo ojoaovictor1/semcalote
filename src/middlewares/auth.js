@@ -20,8 +20,6 @@ export const Auth = {
             }
 
         }
-
-
         if(sucess){
             next();
         }else{
