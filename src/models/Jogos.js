@@ -21,5 +21,5 @@ const sequelize = new Sequelize('semcalote', 'root', '', {
     },
 
   })
-  // Jogos.sync({force: true})
+   //Jogos.sync({force: true})
 export default Jogos;

@@ -1,5 +1,8 @@
 import {Router} from 'express';
 import * as Usuarios from '../controller/Usuarios.js';
+import * as Jogos from '../controller/Jogos.js';
+import * as Rodadas from '../controller/Rodadas.js';
+import * as Jogadores from '../controller/Jogadores.js';
 import { Auth } from '../middlewares/auth.js';
 const route = Router();
 
@@ -27,5 +30,10 @@ route.get('/rodadas/:id', Auth.private, Rodadas.Buscar);
 route.put('/rodadas/:id', Auth.private, Rodadas.Atualizar);
 route.delete('/rodadas/:id', Auth.private, Rodadas.Excluir);
 
+//JOGADORES
+route.post('/jogadores', Auth.private, Jogadores.Cadastrar);
+route.get('/jogadores', Auth.private, Jogadores.Listar);
+route.get('/jogadores/:id', Auth.private, Jogadores.Buscar);
+route.put('/jogadores/:id', Auth.private, Jogadores.Atualizar);
 
 export default route;

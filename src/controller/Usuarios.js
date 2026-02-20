@@ -84,8 +84,8 @@ export const Excluir = async(req, res) =>{
 
 export const Login = async (req, res) => {
     try {
-        const email = req.body.username;
-        const senha = req.body.password;
+        const email = req.body.email;
+        const senha = req.body.senha;
         if(email && senha){
             const usuario = await Usuario.findOne({
                 where: {

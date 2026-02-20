@@ -9,8 +9,6 @@ route.use(express.json());
 route.use(Rotas);
 const port = process.env.PORT;
 
-//listen
-
 route.listen(port, () =>{
     console.log(`Servidor rodando na porta ${port}`);
 })

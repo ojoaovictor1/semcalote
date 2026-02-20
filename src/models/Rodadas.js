@@ -1,4 +1,4 @@
-import {Sequelize} from 'sequelize';
+import {Sequelize, DataTypes} from 'sequelize';
 const sequelize = new Sequelize('semcalote', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
@@ -18,10 +18,14 @@ const sequelize = new Sequelize('semcalote', 'root', '', {
     },
     data:{
         type: Sequelize.DATE
-    }
+    },
+    status: {
+        type: Sequelize.ENUM('em_andamento', 'pausada', 'finalizada', 'cancelada', 'nao_iniciada'),
+        defaultValue: 'nao_iniciada',
+        allowNull: true
+      
+    },
     
-  
-
-    })
+  })
   //Rodadas.sync({force: true})
   export default Rodadas;
