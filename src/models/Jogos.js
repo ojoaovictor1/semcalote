@@ -1,8 +1,22 @@
 import { Sequelize } from "sequelize";
-const sequelize = new Sequelize('semcalote', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-  });
+// const sequelize = new Sequelize('semcalote', 'root', '', {
+//     host: 'localhost',
+//     dialect: 'mysql'
+//   });
+
+//conectando no supabase
+
+const sequelize = new Sequelize(process.env.SUPABASE_URL, {
+  dialect: 'postgres',
+  protocol: 'postgres',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  },
+  logging: false
+})
 
   const Jogos = sequelize.define('Jogos', {
     id: {
@@ -21,5 +35,5 @@ const sequelize = new Sequelize('semcalote', 'root', '', {
     },
 
   })
-   //Jogos.sync({force: true})
+   Jogos.sync({force: true})
 export default Jogos;
