@@ -1,10 +1,7 @@
-import { Sequelize } from "sequelize";
-const sequelize = new Sequelize('semcalote', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-  });
+import { Sequelize, DataTypes } from "sequelize";
+import conn_supabase from "../config/connSupabase.js";
 
-  const Usuario = sequelize.define('Usuario', {
+  const Usuario = conn_supabase.define('Usuario', {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -23,6 +20,6 @@ const sequelize = new Sequelize('semcalote', 'root', '', {
         type: Sequelize.DATE
     }
   })
-  //Usuario.sync({force: true})
+  Usuario.sync({force: true})
   
 export default Usuario;

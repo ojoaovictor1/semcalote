@@ -1,10 +1,7 @@
 import {Sequelize, DataTypes} from 'sequelize';
-const sequelize = new Sequelize('semcalote', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-  });
+import conn_supabase from '../config/connSupabase.js';
 
-  const Rodadas = sequelize.define('Rodadas', {
+  const Rodadas = conn_supabase.define('Rodadas', {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,

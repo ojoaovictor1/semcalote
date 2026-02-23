@@ -1,6 +1,8 @@
-const sequelize = require('sequelize');
+import dotenv from 'dotenv';
+dotenv.config();
+import { Sequelize, DataTypes  } from "sequelize";
 
-const sequelize = new Sequelize(process.env.SUPABASE_URL, {
+const conn_supabase = new Sequelize(process.env.SUPABASE_URL, {
   dialect: 'postgres',
   protocol: 'postgres',
   dialectOptions: {

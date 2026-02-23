@@ -1,24 +1,7 @@
 import { Sequelize } from "sequelize";
-// const sequelize = new Sequelize('semcalote', 'root', '', {
-//     host: 'localhost',
-//     dialect: 'mysql'
-//   });
+import conn_supabase from "../config/connSupabase.js";
 
-//conectando no supabase
-
-const sequelize = new Sequelize(process.env.SUPABASE_URL, {
-  dialect: 'postgres',
-  protocol: 'postgres',
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
-  },
-  logging: false
-})
-
-  const Jogos = sequelize.define('Jogos', {
+  const Jogos = conn_supabase.define('Jogos', {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,

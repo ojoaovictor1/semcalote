@@ -1,11 +1,5 @@
 import { Sequelize, DataTypes  } from "sequelize";
-//importar conexao supabase
-import conn_supabase from "../src/config/connSupabase.js";
-
-// const sequelize = new Sequelize('semcalote', 'root', '', {
-//     host: 'localhost',
-//     dialect: 'mysql'
-//   });
+import conn_supabase from "../config/connSupabase.js";
 
 const Jogadores = conn_supabase.define('Jogadores', {
     id: {
