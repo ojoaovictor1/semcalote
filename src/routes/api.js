@@ -3,6 +3,7 @@ import * as Usuarios from '../controller/Usuarios.js';
 import * as Jogos from '../controller/Jogos.js';
 import * as Rodadas from '../controller/Rodadas.js';
 import * as Jogadores from '../controller/Jogadores.js';
+import * as RodadaIntermediaria from '../controller/RodadaIntermediaria.js';
 import { Auth } from '../middlewares/auth.js';
 const route = Router();
 
@@ -35,5 +36,10 @@ route.post('/jogadores', Auth.private, Jogadores.Cadastrar);
 route.get('/jogadores', Auth.private, Jogadores.Listar);
 route.get('/jogadores/:id', Auth.private, Jogadores.Buscar);
 route.put('/jogadores/:id', Auth.private, Jogadores.Atualizar);
+
+//RODADA_INTERMEDIARIA
+route.post('/rodada_intermediaria', Auth.private, RodadaIntermediaria.CriarRodada);
+route.get('/rodada_intermediaria', Auth.private, RodadaIntermediaria.ListarRodadas);
+
 
 export default route;
