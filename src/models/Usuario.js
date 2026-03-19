@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes } from "sequelize";
 import conn_supabase from "../config/connSupabase.js";
 
-  const Usuario = conn_supabase.define('Usuario', {
+  const Usuario = conn_supabase.define('Usuarios', {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -20,6 +20,5 @@ import conn_supabase from "../config/connSupabase.js";
         type: Sequelize.DATE
     }
   })
-  Usuario.sync({force: true})
   
 export default Usuario;

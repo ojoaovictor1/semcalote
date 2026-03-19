@@ -24,5 +24,5 @@ import conn_supabase from '../config/connSupabase.js';
     },
     
   })
-  //Rodadas.sync({force: true})
+  
   export default Rodadas;

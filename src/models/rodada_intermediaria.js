@@ -17,5 +17,4 @@ const Rodada_Intermediaria = conn_supabase.define('Rodada_Intermediaria', {
         type: Sequelize.INTEGER
     }
     })
-  Rodada_Intermediaria.sync({force: true})
   export default Rodada_Intermediaria;

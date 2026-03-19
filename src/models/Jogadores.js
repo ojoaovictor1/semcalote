@@ -31,6 +31,6 @@ const Jogadores = conn_supabase.define('Jogadores', {
     }
 
   })
-  //Jogadores.sync({force: true})
+
   export default Jogadores;
 

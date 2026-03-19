@@ -6,9 +6,9 @@ import Rodadas from '../models/Rodadas.js';
 dotenv.config();
 
 export const Cadastrar = async (req, res) => {
-    const {nome, email, senha, data_nasc} = req.body;
+    const {nome, id_jogo, data, status} = req.body;
     try {
-        const novaRodada = await Rodadas.create({nome, email, senha, data_nasc});
+        const novaRodada = await Rodadas.create({nome, id_jogo, data, status});
         res.status(201).json(novaRodada);
     } catch (error) {
         res.status(500).json({ error: 'Erro ao cadastrar rodada' });

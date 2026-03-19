@@ -18,5 +18,4 @@ import conn_supabase from "../config/connSupabase.js";
     },
 
   })
-   Jogos.sync({force: true})
 export default Jogos;
