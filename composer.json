@@ -1,0 +1,15 @@
+{
+    "name": "joaovictor/semcalote",
+    "autoload": {
+        "psr-4": {
+            "Joaovictor\\Semcalote\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ojoaovictor1",
+            "email": "ojoaovictor@live.com"
+        }
+    ],
+    "require": {}
+}
