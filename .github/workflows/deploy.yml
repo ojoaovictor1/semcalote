@@ -29,7 +29,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.IMAGE_NAME }}:latest
+          tags: |
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.IMAGE_NAME }}:latest
 
   deploy:
     needs: build-and-push
@@ -47,4 +49,4 @@ jobs:
             az containerapp update \
               --name semcalote-app \
               --resource-group rg-semcalote \
-              --image ${{ env.IMAGE_NAME }}:latest
+              --image ${{ env.IMAGE_NAME }}:${{ github.sha }}
