@@ -1,9 +1,9 @@
-const API_BASE_URL = 'api.semcalote.me';
+const API_BASE_URL = 'https://api.semcalote.me';
 
 async function apiRequest(endpoint, options = {}){
     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
         headers: {
-            'Content-Type': 'aplication/json',
+            'Content-Type': 'application/json',
             ...options.headers
         },
         ...options
