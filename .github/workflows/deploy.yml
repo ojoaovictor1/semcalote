@@ -47,6 +47,6 @@ jobs:
         with:
           inlineScript: |
             az containerapp update \
-              --name semcalote-app \
+              --name semcalote-app-v2 \
               --resource-group rg-semcalote \
               --image ${{ env.IMAGE_NAME }}:${{ github.sha }}
