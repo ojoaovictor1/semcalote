@@ -1,28 +1,18 @@
 async function carregarJogos(){
-    const listaJogosElement = document.querySelector('#lista-jogos');
-    const mensagem = document.querySelector('#mensagem');
+    const containerJogos = document.getElementById('container-jogos');
 
     try {
-        mensagem.textContent = 'Carregando jogos...';
-        const jogos = await listarJogos();
-        listaJogosElement.innerHTML = '';
-
-        if (jogos.length === 0) {
-            mensagem.textContent = 'Nenhum jogo encontrado';
+        const listaJogos = await listarJogos();
+        
+        if(listaJogos.length === 0){
+            containerJogos.innerHTML = '<p>Nenhum jogo encontrado.</p>';
             return;
         }
 
-        jogos.forEach((jogo) => {
-            const item = document.createElement('li');
-            item.textContent = typeof jogo === 'object' && jogo !== null
-                ? JSON.stringify(jogo.nome)
-                : String(jogo);
-            listaJogosElement.appendChild(item);
+        listaJogos.forEach((jogo) => {
+            // criar lógica para exibir os cards.
         });
-
-        mensagem.textContent = '';
     } catch (error) {
         console.error('Erro ao carregar jogos:', error);
-        mensagem.textContent = error.message || 'Erro ao carregar os jogos.';
     }
 }
