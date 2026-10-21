@@ -50,9 +50,6 @@
 
 
   </div>
-<script src="/assets/js/api/client.js"></script>
-<script src="/assets/js/api/jogos.js"></script>
-<script src="/assets/js/pages/jogos.js"></script>
 <script src="<?= BASE_URL ?>/assets/js/menu/menu.js"></script>
 </body>
 </html>
