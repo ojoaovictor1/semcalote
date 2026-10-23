@@ -12,8 +12,10 @@ $jogos = jogos_listar();
 ?>
     <div id="card-jogos">
         <div class="card-topo">
-            <span>imagem</span> 
-            <span>badge</span> 
+            <span class="imagem-jogo">
+                <img src="<?= $jogo['imagem'] ?>" alt="<?= $jogo['nome'] ?>">
+            </span> 
+            <span class="badge-jogo"><?=  $jogo['quantidade_jogadores'] ?> jogadores</span>
         </div>
         <div class="card-meio">
             <span class="classificacao-jogo"><?= $jogo['classificacao'] ?></span>
