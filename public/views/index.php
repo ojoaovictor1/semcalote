@@ -1,5 +1,5 @@
 <?php 
-  include 'config/config.php';
+  include '../config/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -39,11 +39,11 @@
 </head>
 <body>
 
- <?php include(__DIR__ . '/partials/nav.php') ?>
+ <?php include(__DIR__ . '/../partials/nav.php') ?>
  
   <div class="corpo-aplicacao">
 
-    <?php include(__DIR__ . '/partials/sidebar.php') ?>
+    <?php include(__DIR__ . '/../partials/sidebar.php') ?>
 
     <div class="area-conteudo">
       <div class="conteudo-vazio">

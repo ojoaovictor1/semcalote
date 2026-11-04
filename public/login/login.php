@@ -13,7 +13,7 @@
             <h1>Bem-vindo de volta</h1>
             <span>Faça login para continuar</span>
         </div>
-        <form action="login.php" method="POST">
+        <form action="verificarLogin.php" method="POST">
             <label for="email">Email:</label>
             <input type="email" id="email" class="input-padrao" name="email" placeholder="Digite seu email"><br>
             <label for="senha">Senha:</label>

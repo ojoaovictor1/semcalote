@@ -12,7 +12,7 @@ function jogos_listar() {
     }
 }
 
-function jogos_buscar_por_id($id) {
+function jogos_buscar_por_id(int $id) {
     try {
         $resultado = api_get('/jogos/' . $id);
         return $resultado['response'];

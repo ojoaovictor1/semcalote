@@ -2,7 +2,7 @@
 
 // CONSTANTE GLOBAL API
 define('API_URL', 'https://api.semcalote.me');
-
+//define('API_URL', 'http://host.docker.internal:3000');
 function api_request($rota, $metodo = 'GET', $dados = null, $headers = []) {
     $url = API_URL . $rota;
 
