@@ -92,6 +92,19 @@
       cursor: pointer;
     }
 
+    .botao-logout {
+      padding: 6px 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: var(--bg-hover);
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .botao-logout:hover {
+      background-color: var(--bg-active);
+    }
+
      /* Layout do Corpo */
     .corpo-aplicacao {
       display: flex;
@@ -359,4 +372,3 @@
     }
 
   
-

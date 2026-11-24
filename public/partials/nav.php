@@ -15,6 +15,8 @@
         <div class="busca-navegacao">
             <input type="text" placeholder="Pesquisar...">
         </div>
-      <div class="avatar-usuario" title="Minha Conta">U</div>
+        <form action="/logout.php" method="POST">
+            <button class="botao-logout" type="submit">Sair</button>
+        </form>
     </div>
 </header>
