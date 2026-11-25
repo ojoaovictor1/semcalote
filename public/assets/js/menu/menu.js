@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     $('#menu-inicio').click(function() {
         $.ajax({
-            url: 'views/inicio.php',
+            url: 'inicio.php',
             method: 'GET',
             success: function(response) {
                 $('.conteudo-vazio').html(response);
@@ -17,11 +17,11 @@ $(document).ready(function() {
     $('#menu-jogos').click(function() {
     
         $.ajax({
-            url: 'views/jogos.php',
+            url: 'jogos.php',
             method: 'GET',
             success: function(response) {
                 $('.conteudo-vazio').html(response);
-                carregarJogos();
+                // carregarJogos();
             },
             error: function(xhr, status, error) {
                 alert('Erro ao carregar a view de jogos.');
