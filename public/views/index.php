@@ -62,6 +62,7 @@
 <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 <script src="<?= BASE_URL ?>/assets/js/menu/menu.js"></script>
 <script src="<?= BASE_URL ?>/assets/js/toast.js"></script>
+<script src="<?= BASE_URL ?>/assets/js/funcoes.js"></script>
 
 </body>
 </html>

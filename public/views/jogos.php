@@ -17,6 +17,8 @@ $jogos = jogos_listar();
             </span> 
             <span class="badge-jogo"><?=  $jogo['quantidade_jogadores'] ?> jogadores</span>
         </div>
+
+        <?php include __DIR__ . '/include/modalRodada.php'; ?>
         <div class="card-meio">
             <span class="classificacao-jogo"><?= $jogo['classificacao'] ?></span>
             <span class="nome-jogo"><?= $jogo['nome'] ?></span>
@@ -24,7 +26,7 @@ $jogos = jogos_listar();
         </div>
         <div class="card-baixo">
             <span class="preco-jogo">R$ 2</span>
-            <button class="botao-jogar">Jogar</button>
+            <button class="botao-jogar" onclick="abrirModalRodada()">Jogar</button>
         </div>
     </div>
 

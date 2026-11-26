@@ -278,6 +278,36 @@
       gap: 16px;
     }
 
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    .modal-content {
+      position: relative;
+      width: min(480px, calc(100% - 32px));
+      padding: 24px;
+      color: var(--text-main);
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+    }
+
+    .modal-content .fechar {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      color: var(--text-muted);
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     #container-login {
       display: flex;
       flex-direction: column;
