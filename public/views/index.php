@@ -24,17 +24,6 @@
       flex-direction: column;
     }
 
-    .conteudo-vazio {
-      border: 1px dashed var(--border-color);
-      border-radius: 8px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 14px;
-      background-color: rgba(255, 255, 255, 0.01);
-    }
   </style>
 </head>
 <body>
@@ -47,6 +36,7 @@
 
     <div class="area-conteudo">
       <div class="conteudo-vazio">
+        teste2
         conteudo principal <br>
 
   

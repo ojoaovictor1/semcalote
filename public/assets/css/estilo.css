@@ -401,4 +401,15 @@
       transition: all 0.2s ease;
     }
 
+    #tela-jogos {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #topo-jogos {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+    }
   

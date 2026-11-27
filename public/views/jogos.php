@@ -5,31 +5,43 @@ $jogos = jogos_listar();
 
 ?>
 
-<div id="container-jogos">
+<div id="tela-jogos">
 
-<?php
-    while ($jogo = array_shift($jogos)) {
-?>
-    <div id="card-jogos">
-        <div class="card-topo">
-            <span class="imagem-jogo">
-                <img src="<?= $jogo['imagem'] ?>" alt="<?= $jogo['nome'] ?>">
-            </span> 
-            <span class="badge-jogo"><?=  $jogo['quantidade_jogadores'] ?> jogadores</span>
+    <div id="topo-jogos">
+        <div id="esquerda">
+            Jogos Cadastrados
         </div>
-
-        <?php include __DIR__ . '/include/modalRodada.php'; ?>
-        <div class="card-meio">
-            <span class="classificacao-jogo"><?= $jogo['classificacao'] ?></span>
-            <span class="nome-jogo"><?= $jogo['nome'] ?></span>
-            <span class="descricao-jogo"><?= $jogo['descricao'] ?></span>
-        </div>
-        <div class="card-baixo">
-            <span class="preco-jogo">R$ 2</span>
-            <button class="botao-jogar" onclick="abrirModalRodada()">Jogar</button>
+        <div id="direita">
+            <button>Adicionar Novo Jogo</button>
         </div>
     </div>
 
-<?php } ?>
-    
+    <div id="container-jogos">
+
+        <?php
+            while ($jogo = array_shift($jogos)) {
+        ?>
+            <div id="card-jogos">
+                <div class="card-topo">
+                    <span class="imagem-jogo">
+                        <img src="<?= $jogo['imagem'] ?>" alt="<?= $jogo['nome'] ?>">
+                    </span> 
+                    <span class="badge-jogo"><?=  $jogo['quantidade_jogadores'] ?> jogadores</span>
+                </div>
+
+                <?php include __DIR__ . '/include/modalRodada.php'; ?>
+                <div class="card-meio">
+                    <span class="classificacao-jogo"><?= $jogo['classificacao'] ?></span>
+                    <span class="nome-jogo"><?= $jogo['nome'] ?></span>
+                    <span class="descricao-jogo"><?= $jogo['descricao'] ?></span>
+                </div>
+                <div class="card-baixo">
+                    <span class="preco-jogo">R$ 2</span>
+                    <button class="botao-jogar" onclick="abrirModalRodada()">Jogar</button>
+                </div>
+            </div>
+
+        <?php } ?>
+        
+    </div>
 </div>
